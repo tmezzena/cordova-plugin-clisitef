@@ -27,9 +27,12 @@ public class clisitef extends CordovaPlugin {
 
   public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
     if(action.equals("echo")) {
-      String phrase = args.getString(0);
-      // Echo back the first argument
-      Log.d(TAG, phrase);
+      String message = args.getString(0); 
+      if (message != null && message.length() > 0) {
+        callbackContext.success(message);
+      } else {
+        callbackContext.error("Expected one non-empty string argument.");
+      }      
     } else if(action.equals("getDate")) {
       // An example of returning data back to the web layer
       final PluginResult result = new PluginResult(PluginResult.Status.OK, (new Date()).toString());
