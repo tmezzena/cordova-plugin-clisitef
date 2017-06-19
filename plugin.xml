@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-clisitef"
+    version="0.0.1">
+    <name>Cordova Plugin for clisitef</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/tmezzena/cordova-plugin-clisitef.git</repo>
+    <issue>https://github.com/tmezzena/cordova-plugin-clisitef/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/clisitef.js" name="clisitef">
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.clisitef -->
+        <clobbers target="clisitef" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="clisitef">
+          <param name="android-package" value="com.cns.clisitef" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/cns/clisitef.java" target-dir="src/com/cns/" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/clisitef.js" name="clisitef">
+            <runs/>
+            <clobbers target="clisitef" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="clisitef">
+                <param name="ios-package" value="clisitef" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/clisitef.h" />
+        <source-file src="src/ios/clisitef.m" />
+    </platform>
+</plugin>

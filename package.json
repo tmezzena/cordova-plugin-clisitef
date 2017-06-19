@@ -1,0 +1,12 @@
+{
+  "name": "cordova-plugin-clisitef",
+  "version": "0.0.1",
+  "cordova": {
+    "id": "cordova-plugin-clisitef",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "description": "Cordova plugin to clisitef (client library to Sitef) - initial work"
+}
