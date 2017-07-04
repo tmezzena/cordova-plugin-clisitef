@@ -9,6 +9,9 @@ var clisitef = {
   },
   getDate: function(cb) {
     exec(cb, null, PLUGIN_NAME, 'getDate', []);
+  },
+  test: function(cb) {
+    exec(cb, null, PLUGIN_NAME, 'getDate', []);
   }
 };
 

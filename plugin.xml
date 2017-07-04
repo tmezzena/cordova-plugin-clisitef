@@ -24,8 +24,13 @@
           <param name="onload" value="true" />
         </feature>
       </config-file>
-
+      <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <activity android:label="XActivity" android:name="com.cns.XActivity"></activity>
+      </config-file>      
+      
       <source-file src="src/android/com/cns/clisitef.java" target-dir="src/com/cns/" />
+      <source-file src="src/android/com/cns/XActivity.java" target-dir="src/com/cns/" />
+      <source-file src="src/android/com/cns/activity_x.xml" target-dir="res/layout"/>
     </platform>
 
     <!-- ios -->
