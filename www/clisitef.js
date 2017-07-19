@@ -11,7 +11,7 @@ var clisitef = {
     exec(cb, null, PLUGIN_NAME, 'getDate', []);
   },
   test: function(cb) {
-    exec(cb, null, PLUGIN_NAME, 'getDate', []);
+    exec(cb, null, PLUGIN_NAME, 'test', []);
   }
 };
 
