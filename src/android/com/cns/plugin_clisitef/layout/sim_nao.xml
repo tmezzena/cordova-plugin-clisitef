@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+        <TextView
+            android:id="@+id/tvSimNaoMsg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:background="@color/backgroundBar"
+            android:gravity="center_horizontal"
+            android:padding="10dip"
+            android:text="@string/app_name"
+            android:textColor="#fff"
+            android:textSize="@dimen/font_size" />
+
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingTop="20dp" >
+
+
+            <Button
+                android:id="@+id/btSNSim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dip"
+                android:text="@string/btSNSim"
+                android:textSize="@dimen/btTextSize"
+                android:width="60dp" />
+
+
+            <Button
+                android:id="@+id/btSNCancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="15dip"
+                android:text="@string/btSNCancelar"
+                android:textSize="@dimen/btTextSize"
+                android:width="110dip" />
+
+            <Button
+                android:id="@+id/btSNNao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btSNSim"
+                android:layout_alignBottom="@+id/btSNSim"
+                android:layout_toRightOf="@+id/btSNSim"
+                android:text="@string/btSNNao"
+                android:textSize="@dimen/btTextSize"
+                android:width="60dp" android:layout_marginLeft="20dip"/>
+
+        </RelativeLayout>
+</LinearLayout>

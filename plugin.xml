@@ -20,17 +20,34 @@
       </js-module>
       <config-file target="res/xml/config.xml" parent="/*">
         <feature name="clisitef">
-          <param name="android-package" value="com.cns.clisitef" />
+          <param name="android-package" value="com.cns.plugin_clisitef.clisitef" />
           <param name="onload" value="true" />
         </feature>
       </config-file>
+      <config-file target="AndroidManifest.xml" parent="/manifest">
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+        <uses-permission android:name="android.permission.BLUETOOTH"/>
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      </config-file>   
       <config-file target="AndroidManifest.xml" parent="/manifest/application">
-        <activity android:label="XActivity" android:name="com.cns.XActivity"></activity>
-      </config-file>      
+        <activity android:label="Venda TEF" android:name="com.cns.plugin_clisitef.XActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:label="Venda TEF" android:name="com.cns.plugin_clisitef.DialogActivity" android:theme="@android:style/Theme.Dialog" />
+        <activity android:label="Venda TEF" android:name="com.cns.plugin_clisitef.MenuActivity" android:theme="@android:style/Theme.Dialog" />
+        <activity android:label="Venda TEF" android:name="com.cns.plugin_clisitef.SimNaoActivity" android:theme="@android:style/Theme.Dialog" />
+      </config-file>   
       
-      <source-file src="src/android/com/cns/clisitef.java" target-dir="src/com/cns/" />
-      <source-file src="src/android/com/cns/XActivity.java" target-dir="src/com/cns/" />
-      <source-file src="src/android/com/cns/activity_x.xml" target-dir="res/layout"/>
+      <source-file src="src/android/com/cns/plugin_clisitef/clisitef.java" target-dir="src/com/cns/plugin_clisitef/" />
+      <source-file src="src/android/com/cns/plugin_clisitef/XActivity.java" target-dir="src/com/cns/plugin_clisitef/" />
+      <source-file src="src/android/com/cns/plugin_clisitef/DialogActivity.java" target-dir="src/com/cns/plugin_clisitef/" />
+      <source-file src="src/android/com/cns/plugin_clisitef/MenuActivity.java" target-dir="src/com/cns/plugin_clisitef/" />
+      <source-file src="src/android/com/cns/plugin_clisitef/SimNaoActivity.java" target-dir="src/com/cns/plugin_clisitef/" />
+      <source-file src="src/android/com/cns/plugin_clisitef/layout/activity_x.xml" target-dir="res/layout"/>
+      <source-file src="src/android/com/cns/plugin_clisitef/layout/dialog.xml" target-dir="res/layout"/>
+      <source-file src="src/android/com/cns/plugin_clisitef/layout/menu.xml" target-dir="res/layout"/>
+      <source-file src="src/android/com/cns/plugin_clisitef/layout/menu_item.xml" target-dir="res/layout"/>
+      <source-file src="src/android/com/cns/plugin_clisitef/layout/sim_nao.xml" target-dir="res/layout"/>
+      <source-file src="src/android/br/com/softwareexpress/sitef" target-dir="libs"/>
     </platform>
 
     <!-- ios -->

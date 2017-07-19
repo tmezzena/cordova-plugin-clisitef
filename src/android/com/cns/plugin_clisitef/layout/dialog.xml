@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff">
+        
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="178dp"
+    android:background="#fff"
+    android:orientation="vertical" >
+    
+
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:background="@color/backgroundBar"
+        android:padding="10dip"
+        android:text="@string/app_name"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_size" android:gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/edInput"        
+        android:layout_width="fill_parent"        
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:inputType="text" android:autoLink="none">
+
+        <requestFocus />
+
+        <requestFocus />
+
+    </EditText>
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" android:paddingTop="20dp">
+
+
+
+        <Button
+            android:id="@+id/btDlgOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dip"
+            android:text="@string/btDlgOk"
+            android:textSize="@dimen/btTextSize"
+            android:width="110dp" />
+
+        <Button
+            android:id="@+id/btDlgCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dip"
+            android:text="@string/btDlgCancelar"
+            android:textSize="@dimen/btTextSize"
+            android:width="110dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+</ScrollView>

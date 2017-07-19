@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="fill_vertical"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:background="@color/backgroundBar"
+        android:gravity="center_horizontal"
+        android:padding="10dip"
+        android:text="@string/tvTitle"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/font_size" />
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="fill_vertical" android:layout_weight="1">
+    </ListView>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="right" >
+
+
+
+        <Button
+            android:id="@+id/btMenuCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="20dp"
+            android:text="@string/btMenuCancelar"
+            android:textSize="@dimen/btTextSize"
+            android:width="110dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
