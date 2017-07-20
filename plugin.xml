@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="cordova-plugin-clisitef"
-    version="0.0.5">
+    version="0.0.6">
     <name>Cordova Plugin for clisitef</name>
     <description></description>
     <license>MIT</license>
@@ -42,12 +42,17 @@
       <source-file src="src/android/com/cns/plugin_clisitef/DialogActivity.java" target-dir="src/com/cns/plugin_clisitef/" />
       <source-file src="src/android/com/cns/plugin_clisitef/MenuActivity.java" target-dir="src/com/cns/plugin_clisitef/" />
       <source-file src="src/android/com/cns/plugin_clisitef/SimNaoActivity.java" target-dir="src/com/cns/plugin_clisitef/" />
-      <source-file src="src/android/com/cns/plugin_clisitef/layout/activity_x.xml" target-dir="res/layout"/>
-      <source-file src="src/android/com/cns/plugin_clisitef/layout/dialog.xml" target-dir="res/layout"/>
-      <source-file src="src/android/com/cns/plugin_clisitef/layout/menu.xml" target-dir="res/layout"/>
-      <source-file src="src/android/com/cns/plugin_clisitef/layout/menu_item.xml" target-dir="res/layout"/>
-      <source-file src="src/android/com/cns/plugin_clisitef/layout/sim_nao.xml" target-dir="res/layout"/>
-      <source-file src="src/android/br/com/softwareexpress/sitef" target-dir="libs"/>
+      <source-file src="src/android/br/com/softwareexpress/sitef/jclisitef-android.jar" target-dir="libs"/>
+      <source-file src="src/android/br/com/softwareexpress/sitef/arm64-v8a" target-dir="libs"/>
+      <source-file src="src/android/br/com/softwareexpress/sitef/armeabi" target-dir="libs"/>
+      <source-file src="src/android/br/com/softwareexpress/sitef/armeabi-v7a" target-dir="libs"/>
+      <source-file src="src/android/br/com/softwareexpress/sitef/mips" target-dir="libs"/>
+      <source-file src="src/android/br/com/softwareexpress/sitef/mips64" target-dir="libs"/>
+      <source-file src="src/android/br/com/softwareexpress/sitef/x86" target-dir="libs"/>
+      <source-file src="src/android/br/com/softwareexpress/sitef/x86_64" target-dir="libs"/>
+      <resource-file src="src/android/com/cns/plugin_clisitef/layout" target="res/layout"/>
+      <resource-file src="src/android/com/cns/plugin_clisitef/values" target="res/values"/>
+
     </platform>
 
     <!-- ios -->

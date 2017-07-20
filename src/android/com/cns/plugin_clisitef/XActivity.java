@@ -1,6 +1,7 @@
 package com.cns.plugin_clisitef;
 
 import android.app.Activity;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.content.Intent;
 import android.os.Handler;
@@ -9,16 +10,13 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.cns.testesitef.R;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.Locale;
-
 import br.com.softwareexpress.sitef.android.CliSiTefI;
-
 
 public class XActivity extends Activity {
     private static final int CAMPO_COMPROVANTE_CLIENTE = 121;
@@ -53,6 +51,8 @@ public class XActivity extends Activity {
     private static boolean sitefTrOK;
     private static String statusTrn = "";
     private static String statusCnx = "";
+    private static String package_name = "";
+    private static Resources ResourceId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,11 +61,14 @@ public class XActivity extends Activity {
         //Depreciado...
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 
-        //String package_name = getApplication().getPackageName();
-        //setContentView(getApplication().getResources().getIdentifier("activity_x", "layout", package_name));
-        setContentView(R.layout.activity_x);
+        package_name = getApplication().getPackageName();
+        ResourceId = getApplication().getResources();
+        setContentView(ResourceId.getIdentifier("activity_x", "layout", package_name));
+        //setContentView(R.layout.activity_x);
 
-        Button btn = (Button) findViewById (R.id.btCfgCancela);
+        Button btn = (Button) findViewById (ResourceId.getIdentifier("btCfgCancela", "id", package_name));
+        //Button btn = (Button) findViewById (R.id.btCfgCancela);
+
         btn.setText("Cancelar");
         btn.setOnClickListener (new View.OnClickListener()
         {
@@ -415,7 +418,8 @@ public class XActivity extends Activity {
             }
 
             //-- Mudar o botão para OK...
-            final Button btn = (Button) findViewById(R.id.btCfgCancela);
+            final Button btn = (Button) findViewById(ResourceId.getIdentifier("btCfgCancela", "id", package_name));
+
             btn.setVisibility(View.VISIBLE);
             btn.setText("OK");
         }
@@ -425,14 +429,16 @@ public class XActivity extends Activity {
     {
         statusTrn = s;
         String aux = statusCnx + "\n\r" + statusTrn;
-        ((TextView) findViewById (R.id.tvStatusTrn)).setText (aux.trim());
+        ((TextView) findViewById (ResourceId.getIdentifier("tvStatusTrn", "id", package_name))).setText (aux.trim());
+        //((TextView) findViewById (R.id.tvStatusTrn)).setText (aux.trim());
     }
 
     private void setStatusConexao(String s)
     {
         statusCnx = s;
         String aux = statusCnx + "\n\r" + statusTrn;
-        ((TextView) findViewById (R.id.tvStatusTrn)).setText (aux.trim());
+        ((TextView) findViewById (ResourceId.getIdentifier("tvStatusTrn", "id", package_name))).setText (aux.trim());
+        //((TextView) findViewById (R.id.tvStatusTrn)).setText (aux.trim());
     }
 
     private static Handler hndComando = new Handler ()

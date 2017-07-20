@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">pluginsitef</string>
+    <string name="launcher_name">@string/app_name</string>
+    <string name="activity_name">Transação Cartão</string>
+    <string name="edOpc">[TipoPinPad=ANDROID_BT;]</string>
+    <string name="tvTitle">PlugIn CliSiTef</string>
+    <string name="btConfigura">Configura Terminal</string>
+    <string name="btVenda">Venda</string>
+    <string name="mnAdministrativo">Administrativo</string>
+    <string name="btPinpad">Pinpad</string>
+    <string name="btAbrirBluetooth">Iniciar</string>
+    <string name="btConexao">Aguardar conexao BT</string>
+    <string name="btBluetooth">Bluetooth cliente</string>
+    <string name="btCancelaPPBT">Cancela PP BT</string>
+    <string name="btPinPadOn">On</string>
+    <string name="btPinpadOff">Off</string>
+    <string name="btPareamento">Pareamento</string>
+    <string name="btCadastra">Cadastrar dispositivo</string>
+    <string name="lbIP">IP</string>
+    <string name="lbEmpresa">Empresa</string>
+    <string name="lbTerminal">Terminal</string>
+    <string name="edCfgTerminal">SE000001</string>
+    <string name="edCfgEmpresa">00000000</string>
+    <string name="edCfgIP">192.168.2.73</string>
+    <string name="btCfgCancela">Cancela</string>
+    <string name="btCfgConfigura">Configura</string>
+    <string name="btDlgOk">OK</string>
+    <string name="btDlgCancelar">Cancelar</string>
+    <string name="btMenuCancelar">Cancelar</string>
+    <string name="btSNSim">Sim</string>
+    <string name="btSNNao">Nao</string>
+    <string name="btSNCancelar">Cancelar</string>
+    <string name="btPPCancelarPareamento">Cancelar</string>
+    <string name="mnTesteBTCliente">Bluetooth Cliente</string>
+    <string name="mnConfigurar">Configurar</string>
+    <string name="tvConfigura">Configuração</string>
+    <string name="tvTransacao">Transação TEF</string>
+    <string name="tvPareamento">Parear PinPad</string>
+    <string name="imgLogo"></string>
+    <string name="tvVenda">Venda</string>
+</resources>

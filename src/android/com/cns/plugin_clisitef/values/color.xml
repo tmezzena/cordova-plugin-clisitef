@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>	
+    <color name="grey">#FFEAEAEA</color>
+    <color name="backgroundBar">#FF542689</color>
+    <color name="texto">#000</color>
+    <color name="green">#1A1</color>    
+    <color name="red">#F00</color>
+    <color name="darkgrey">#808080</color>
+    <color name="endcolor">#6a3ab2</color>
+    <color name="appdefault">#FF542689</color>
+</resources>
