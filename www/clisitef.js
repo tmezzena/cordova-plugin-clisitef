@@ -12,7 +12,10 @@ var clisitef = {
   },
   test: function(cb) {
     exec(cb, null, PLUGIN_NAME, 'test', []);
-  }
+  },
+  vende: function(cb, config, venda) {
+    exec(cb, null, PLUGIN_NAME, 'vende', [config, venda]);
+  }    
 };
 
 module.exports = clisitef;

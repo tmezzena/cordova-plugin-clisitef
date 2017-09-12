@@ -35,7 +35,8 @@ public class clisitef extends CordovaPlugin {
     this.callbackContext = callbackContext;
 
     final CordovaPlugin that = this;
-
+    final JSONArray fargs = args;
+    
     if(action.equals("echo")) {
       String message = args.getString(0); 
       if (message != null && message.length() > 0) {
@@ -68,6 +69,35 @@ public class clisitef extends CordovaPlugin {
           yourIntent.putExtra("sitefData", "");
           yourIntent.putExtra("sitefHora","");
           yourIntent.putExtra("sitefRestricoes","");
+
+          that.cordova.startActivityForResult(that, yourIntent, REQUEST_CODE);
+        }
+      });
+    } else if(action.equals("vende")) {
+      cordova.getThreadPool().execute(new Runnable() {
+        public void run() {
+          Intent yourIntent = new Intent(that.cordova.getActivity().getBaseContext(), XActivity.class);
+          //that.cordova.getActivity().startActivity(yourIntent);
+          //callbackContext.success(); // Thread-safe.
+
+          try {
+            JSONObject tefConfig = fargs.getJSONObject(0);
+            JSONObject tefVenda = fargs.getJSONObject(1);
+            
+            //-- Passar oe parâmetros configuração...
+            yourIntent.putExtra("sitefIp", tefConfig.getString("sitefIp"));
+            yourIntent.putExtra("sitefEmpresa", tefConfig.getString("sitefEmpresa"));
+            yourIntent.putExtra("sitefTerminal", tefConfig.getString("sitefTerminal"));
+            yourIntent.putExtra("sitefParametros", tefConfig.getString("sitefParametros"));
+
+            //-- Passar oe parâmetros venda...
+            yourIntent.putExtra("sitefValor", tefVenda.getDouble("sitefValor"));
+            yourIntent.putExtra("sitefCupomFiscal", tefVenda.getInt("sitefValor"));
+            yourIntent.putExtra("sitefData", tefVenda.getString("sitefData"));
+            yourIntent.putExtra("sitefHora", tefVenda.getString("sitefHora"));
+            yourIntent.putExtra("sitefRestricoes", tefVenda.getString("sitefRestricoes"));
+          } catch (JSONException e) {
+          }
 
           that.cordova.startActivityForResult(that, yourIntent, REQUEST_CODE);
         }
