@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="cordova-plugin-clisitef"
-    version="0.0.7">
+    version="0.0.8">
     <name>Cordova Plugin for clisitef</name>
     <description></description>
     <license>MIT</license>

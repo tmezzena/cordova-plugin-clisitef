@@ -108,18 +108,29 @@ public class clisitef extends CordovaPlugin {
 
   public void onActivityResult(int requestCode, int resultCode, Intent intent) {
     if (requestCode == REQUEST_CODE && this.callbackContext != null) {
-      if (intent == null) {
-        this.callbackContext.success("Clicou fora...!!!!");
-
-      } else {
-
-        if (intent.getExtras().getBoolean("retVendaOK", false)) {
-          this.callbackContext.success(intent.getExtras().getString("retVendaMsg", "Sem Retorno!!!"));
+      JSONObject ret = new JSONObject();
+      try {
+        ret.put("cancel",false);
+        ret.put("success",false);
+        ret.put("message","");
+        ret.put("retCupomCliente","");
+        ret.put("retCupomEstab","");
+        if (intent == null) {
+          ret.put("cancel",true);
         } else {
-          this.callbackContext.success(intent.getExtras().getString("retVendaMsg", "ERRO Sem Retorno!!!"));
+          if (intent.getExtras().getBoolean("retVendaOK", false)) {
+            ret.put("success",true);
+            ret.put("retCupomCliente",intent.getExtras().getString("retCupomCliente", ""));
+            ret.put("retCupomEstab",intent.getExtras().getString("retCupomEstab", ""));
+            ret.put("message",intent.getExtras().getString("retVendaMsg", ""));
+          } else {
+            ret.put("success",false);
+            ret.put("message",intent.getExtras().getString("retVendaMsg", "ERRO Sem Retorno!!!"));
+          }
         }
-
+      } catch (JSONException e) {
       }
+      this.callbackContext.success(ret);
     }
   }
 
