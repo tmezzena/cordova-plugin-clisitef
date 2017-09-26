@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="font_size">20sp</dimen>
+    <dimen name="fontlist_size">25sp</dimen>
     <dimen name="btTextSize">16dp</dimen>
 </resources>

@@ -16,6 +16,6 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:textSize="@dimen/font_size"
-    android:padding="5dp" 
+    android:textSize="@dimen/fontlist_size"
+    android:padding="20dp" 
     android:textColor="#606060" />
